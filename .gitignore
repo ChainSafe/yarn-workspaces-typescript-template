@@ -3,7 +3,12 @@ node_modules
 .idea
 .vscode
 .yarn/*
+dist
+
+# Non zero install strategy
+.pnp.*
 !.yarn/patches
 !.yarn/plugins
+!.yarn/releases
 !.yarn/sdks
 !.yarn/versions
