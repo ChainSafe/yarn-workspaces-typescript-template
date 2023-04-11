@@ -15,7 +15,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: 'yarn' # cache node modules
-          node-version: lts
+          node-version: 18
+      - run: corepack enable
+      - run: yarn install # install dependencies
       - run: yarn run lint # lint code
       - run: yarn run build # compile typescript into javascript
       - run: yarn run test:unit # run unit tests
